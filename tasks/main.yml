@@ -1,0 +1,16 @@
+---
+
+- name: Create and launch datarhei container
+  community.docker.docker_container:
+    name: datarhei
+    image: datarhei/restreamer:latest
+    published_ports:
+      - '{{ gui_http_port }}:8080'
+      - '{{ gui_https_port }}:8181'
+      - '{{ rtmp_port }}:1935'
+      - '{{ rtmps_port }}:1936'
+      - '{{ srt_port }}:6000/udp'
+    volumes:
+      - datarhei_config:/core/config
+      - datarhei_data:/core/data
+    restart_policy: '{{ restart_policy }}'

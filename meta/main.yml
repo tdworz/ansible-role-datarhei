@@ -1,0 +1,18 @@
+galaxy_info:
+  namespace: tdworz
+  role_name: datarhei
+  description: An Ansible role to install datarhei
+  author: Tom Dworzanski (tdworz)
+  license: GPL-3.0-or-later
+  issue_tracker_url: https://github.com/tdworz/ansible-role-datarhei/issues
+  platforms:
+    - name: Debian
+      versions:
+        - bullseye
+  galaxy_tags:
+    - datarhei
+    - streaming
+    - livestreaming
+
+dependencies:
+  - tdworz.docker
